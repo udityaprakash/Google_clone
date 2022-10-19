@@ -68,16 +68,19 @@ class _BodypageState extends State<Bodypage> {
       padding: const EdgeInsets.only(top:100),
       child: Center(child: Column(
         children:[const Image(width: 100,image: NetworkImage('https://cdn.pixabay.com/photo/2015/12/11/11/43/google-1088004_960_720.png')),
-      Container(width: MediaQuery.of(context).size.width *0.9,child: TextField(controller: search,
-      decoration: InputDecoration(
-        border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(10.0),
+      Padding(
+        padding: const EdgeInsets.only(top:30),
+        child: Container(width: MediaQuery.of(context).size.width *0.9,child: TextField(controller: search,
+        decoration: InputDecoration(
+          border: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(10.0),
+          ),
+          filled: true,
+          hintStyle: TextStyle(color: Colors.grey[800]),
+          hintText: "Search",
+          fillColor: Colors.white70),
         ),
-        filled: true,
-        hintStyle: TextStyle(color: Colors.grey[800]),
-        hintText: "Search",
-        fillColor: Colors.white70),
-      ),
+        ),
       ),
       ]),
       ),
