@@ -31,9 +31,10 @@ class _homepageState extends State<homepage> {
     return Scaffold(
         appBar: AppBar(
           title: const Text('GoogleApp'),
-          backgroundColor: Colors.red[900],
+          backgroundColor: Colors.blueGrey[900],
         ),
-        body: Bodypage(),
+        body: const SingleChildScrollView(child: Bodypage()),
+        backgroundColor: Colors.blueGrey[100],
       );
   }
 }
@@ -51,6 +52,7 @@ class _BodypageState extends State<Bodypage> {
   @override
   void initState() {
     search = TextEditingController();
+    // ignore: todo
     // TODO: implement initState
     super.initState();
   }
@@ -62,6 +64,7 @@ class _BodypageState extends State<Bodypage> {
   }
   @override
   Widget build(BuildContext context) {
-    return TextField(controller: search ,);
+    return Column(children:[const Image(image: NetworkImage('https://cdn.pixabay.com/photo/2015/12/11/11/43/google-1088004_960_720.png')),
+    Container(width: MediaQuery.of(context).size.width *0.9,child: TextField(controller: search)),]);
   }
 }
